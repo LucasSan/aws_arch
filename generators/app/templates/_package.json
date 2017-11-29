@@ -1,0 +1,68 @@
+{
+    "name": "<%= name %>",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "nyc": {
+      "check-coverage": true,
+      "include": [
+        "src/**/*.js"
+      ],
+      "exclude": [
+        "src/config/*.js",
+        "src/adapter/*.js"
+      ],
+      "cache": false,
+      "all": true
+    },
+    "scripts": {
+      "start": "npm install && nodemon src/server",
+      "test": "set NODE_ENV=test&&nyc --reporter=lcov mocha --recursive"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://germanocontamobi@bitbucket.org/contamobi/conductor-adherence-service.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "homepage": "https://bitbucket.org/contamobi/conductor-adherence-service#readme",
+    "dependencies": {
+      "aws-sdk": "^2.154.0",
+      "babel-plugin-istanbul": "^4.1.5",
+      "body-parser": "^1.18.2",
+      "cookie-parser": "^1.4.3",
+      "cors": "^2.8.4",
+      "cross-env": "^5.1.1",
+      "diacritics": "^1.3.0",
+      "dotenv": "^4.0.0",
+      "ejs": "^2.3.4",    
+      "export-config": "^1.0.0",
+      "express": "^4.16.2",
+      "fs": "0.0.1-security",
+      "lodash": "^4.17.4",
+      "moment": "^2.19.2",
+      "mongoose":"^4.2.4",
+      "morgan": "^1.9.0",
+      "request": "^2.83.0",
+      "require": "^2.4.20",
+      "shortid": "^2.2.8",
+      "tv4": "^1.3.0",
+      "winston": "^2.4.0",
+      "winston-daily-rotate-file": "^1.7.2"
+    },
+    "devDependencies": {
+      "chai": "^4.1.2",
+      "eslint": "^4.11.0",
+      "eslint-config-airbnb": "^16.1.0",
+      "eslint-plugin-import": "^2.8.0",
+      "eslint-plugin-jsx-a11y": "^6.0.2",
+      "eslint-plugin-react": "^7.5.1",
+      "jsdoc": "^3.5.5",
+      "mocha": "^4.0.1",
+      "nodemon": "^1.12.1",
+      "nyc": "^11.3.0",
+      "supertest": "^3.0.0",
+      "supertest-as-promised": "^4.0.2"
+    }
+  }
+  
