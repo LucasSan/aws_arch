@@ -1,0 +1,7 @@
+node_modules
+log
+.nyc_output
+.env
+coverage
+out
+src/config/dynamo

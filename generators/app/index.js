@@ -9,14 +9,12 @@ module.exports = class extends Generator {
     this.log(
       yosay('Welcome to the exceptional ' + chalk.red('generator-awslucasarch') + ' generator!'));
 
-    const prompts = [
-      {
-        type: 'input',
-        name: 'projectname',
-        message: 'Project Name: ',
-        default: 'none'
-      }
-    ];
+    const prompts = [{
+      type: 'input',
+      name: 'projectname',
+      message: 'Project Name: ',
+      default: 'none'
+    }];
 
     return this.prompt(prompts).then(props => {
       // To access props later use this.props.someAnswer;
@@ -31,6 +29,31 @@ module.exports = class extends Generator {
       this.destinationPath('package.json'), {
         name: this.props.projectname
       });
+
+    // Copy the configuration files
+    this.fs.copy(
+      this.templatePath('_gitignore'),
+      this.destinationPath('.gitignore'));
+
+    // Copy the configuration files
+    this.fs.copy(
+      this.templatePath('_eslintignore'),
+      this.destinationPath('.eslintignore'));
+
+    // Copy the configuration files
+    this.fs.copy(
+      this.templatePath('_eslintrc'),
+      this.destinationPath('.eslintrc'));
+
+    // Copy the configuration files
+    this.fs.copy(
+      this.templatePath('_jsbeautifyrc'),
+      this.destinationPath('.jsbeautifyrc'));
+
+    // Copy the configuration files
+    this.fs.copy(
+      this.templatePath('_nvmrc'),
+      this.destinationPath('.nvmrc'));
 
     // Server file
     this.fs.copyTpl(
