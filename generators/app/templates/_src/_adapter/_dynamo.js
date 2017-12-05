@@ -14,10 +14,10 @@ const DynamoAdapter = {
   getState
 }
 
-function getState() {
+function getState () {
   return dynamodb
 }
 
-module.exports = function factory() {
+module.exports = function factory () {
   return DynamoAdapter
 }

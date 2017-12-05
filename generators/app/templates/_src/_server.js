@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({
 }))
 app.use(cookieParser())
 
-function upServer() {
+function upServer () {
   app.listen(app.get('port'), () => {
     Logger.info('[<%= name %>] => [server.js] => [upServer] => Server is running at port: ' + app.get('port'))
   })

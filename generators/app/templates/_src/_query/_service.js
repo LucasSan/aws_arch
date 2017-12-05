@@ -5,7 +5,7 @@ const QueryService = {
   worker
 }
 
-function worker(query) {
+function worker (query) {
   try {
     const queryWorked = (_.mapKeys(query, (v, k) => _.camelCase(k)))
     const keys = Object.keys(queryWorked)
@@ -25,7 +25,7 @@ function worker(query) {
           queryWorked[key] = true
         }
       }
-    });
+    })
     Logger.info('[<%= name %>] => [query/service.js] => [worker] => Working query: %j', queryWorked)
     return queryWorked
   } catch (ex) {
@@ -34,6 +34,6 @@ function worker(query) {
   }
 }
 
-module.exports = function factory() {
+module.exports = function factory () {
   return QueryService
 }

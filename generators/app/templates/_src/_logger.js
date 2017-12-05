@@ -36,7 +36,7 @@ const winston = new Winston.Logger({
 
 winston.stream = {
   write: (message) => {
-    winston.info(message);
+    winston.info(message)
   }
 }
 

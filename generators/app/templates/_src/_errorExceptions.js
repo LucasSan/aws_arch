@@ -6,14 +6,14 @@ const ErrorExceptions = {
 BusinessError.prototype = new Error()
 InfrastructureError.prototype = new Error()
 
-function BusinessError(message) {
+function BusinessError (message) {
   this.message = message
 }
 
-function InfrastructureError(message) {
+function InfrastructureError (message) {
   this.message = message
 }
 
-module.exports = function factory() {
+module.exports = function factory () {
   return ErrorExceptions
 }

@@ -8,7 +8,7 @@ const CodeGeneratorService = {
   generateByName
 }
 
-function generate(prefix) {
+function generate (prefix) {
   if (prefix) {
     let code = `${prefix}_${shortid.generate()}`
     code = code.split('@').join('a')
@@ -19,7 +19,7 @@ function generate(prefix) {
   return shortid.generate()
 }
 
-function generateByName(name) {
+function generateByName (name) {
   if (name) {
     let aux = removeDiacritics(name.toLowerCase())
     aux = aux.split(' ').join('-')
@@ -28,6 +28,6 @@ function generateByName(name) {
   return generate()
 }
 
-module.exports = function factory() {
+module.exports = function factory () {
   return CodeGeneratorService
 }
