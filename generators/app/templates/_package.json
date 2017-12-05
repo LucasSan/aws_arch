@@ -5,6 +5,10 @@
     "main": "index.js",
     "nyc": {
       "check-coverage": true,
+      "lines": 60,
+      "statements": 60,
+      "functions": 60,
+      "branches": 60,
       "include": [
         "src/**/*.js"
       ],
@@ -46,6 +50,8 @@
       "request": "^2.83.0",
       "require": "^2.4.20",
       "shortid": "^2.2.8",
+      "standard": "^10.0.3",
+      "swagger-ui-express": "^2.0.11",
       "tv4": "^1.3.0",
       "winston": "^2.4.0",
       "winston-daily-rotate-file": "^1.7.2"
@@ -53,7 +59,7 @@
     "devDependencies": {
       "chai": "^4.1.2",
       "eslint": "^4.11.0",
-      "eslint-config-airbnb": "^16.1.0",
+      "eslint-config-standard": "^10.2.1",
       "eslint-plugin-import": "^2.8.0",
       "eslint-plugin-jsx-a11y": "^6.0.2",
       "eslint-plugin-react": "^7.5.1",

@@ -1,14 +1,14 @@
-const Winston = require('winston');
-const moment = require('moment');
-const fs = require('fs');
-const { PATH, FILE } = require('./config/logger');
-require('winston-daily-rotate-file');
+const Winston = require('winston')
+const moment = require('moment')
+const fs = require('fs')
+const { PATH, FILE } = require('./config/logger')
+require('winston-daily-rotate-file')
 
-moment.locale('pt-BR');
-Winston.emitErrs = true;
+moment.locale('pt-BR')
+Winston.emitErrs = true
 
 if (!fs.existsSync(PATH)) {
-  fs.mkdirSync(PATH);
+  fs.mkdirSync(PATH)
 }
 
 const winston = new Winston.Logger({
@@ -32,12 +32,12 @@ const winston = new Winston.Logger({
     })
   ],
   exitOnError: false
-});
+})
 
 winston.stream = {
   write: (message) => {
     winston.info(message);
   }
-};
+}
 
-module.exports = Object.assign(Object.create(winston));
+module.exports = Object.assign(Object.create(winston))

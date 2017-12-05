@@ -1,4 +1,4 @@
-const exportConfig = require('export-config');
+const exportConfig = require('export-config')
 
 const AppConfig = {
   default: {
@@ -10,6 +10,6 @@ const AppConfig = {
     PORT: 3002
   },
   required: ['PORT']
-};
+}
 
-module.exports = exportConfig(AppConfig);
+module.exports = exportConfig(AppConfig)

@@ -1,4 +1,4 @@
-const exportConfig = require('export-config');
+const exportConfig = require('export-config')
 
 const LoggerConfig = {
   default: {
@@ -9,6 +9,6 @@ const LoggerConfig = {
     PATH: process.env.PATH_LOG || `${__dirname}/../../log`
   },
   required: ['FILE', 'PATH']
-};
+}
 
-module.exports = exportConfig(LoggerConfig);
+module.exports = exportConfig(LoggerConfig)
